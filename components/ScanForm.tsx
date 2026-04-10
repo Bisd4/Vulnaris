@@ -75,7 +75,7 @@ export default function ScanForm({ onScanStart, onScanComplete, onError }: ScanF
                                 type="text"
                                 value={url}
                                 onChange={(e) => setUrl(e.target.value)}
-                                placeholder="scan --target=example.com"
+                                placeholder="ejm= google.com"
                                 className="flex-1 px-4 py-4 bg-transparent border-none text-green-400 placeholder-green-900/50 focus:ring-0 focus:outline-none text-base font-mono font-medium"
                                 disabled={loading}
                             />

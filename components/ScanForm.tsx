@@ -95,7 +95,7 @@ export default function ScanForm({ onScanStart, onScanComplete, onError }: ScanF
                         ) : (
                             <>
                                 <Zap className="h-5 w-5" />
-                                <span>EJECUTAR</span>
+                                <span>ESCANEAR</span>
                             </>
                         )}
                     </button>

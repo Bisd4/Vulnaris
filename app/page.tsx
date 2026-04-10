@@ -59,7 +59,6 @@ export default function Home() {
           <div className="terminal-panel max-w-3xl mx-auto p-6">
             <div className="flex items-start gap-3 text-left">
               <div className="text-green-400 text-xs font-mono font-bold mt-1 select-none">&gt;</div>
-              <p className="text-gray-400 text-sm md:text-base font-mono leading-relaxed"><br></br>
                 <span className="text-cyan-400 font-bold">// DESCRIPCIÓN:</span><br />Solución de ciberseguridad diseñada para analizar, detectar y mitigar vulnerabilidades en aplicaciones y servicios web.
                 <br /><br />
                 <span className="text-cyan-400 font-bold">// CAPACIDADES:</span><br />

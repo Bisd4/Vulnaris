@@ -66,7 +66,7 @@ export default function ScanForm({ onScanStart, onScanComplete, onError }: ScanF
                         <div className="relative flex items-center bg-black/60 border-2 border-green-500/30 rounded-lg overflow-hidden hover:border-green-500/50 transition-all">
                             {/* Terminal Prompt */}
                             <div className="px-4 py-4 bg-green-500/10 border-r border-green-500/30 flex items-center gap-2">
-                                <span className="text-green-400 font-bold font-mono select-none">root@securigauge</span>
+                                <span className="text-green-400 font-bold font-mono select-none">root@vulnaris</span>
                                 <span className="text-gray-500 font-mono">~</span>
                                 <span className="text-green-400 font-bold font-mono">$</span>
                             </div>

@@ -33,7 +33,7 @@ export default function SubdomainsReport({ subdomains }: SubdomainsReportProps) 
                     <div className="flex items-center gap-3">
                         <Network className="h-5 w-5 text-cyan-400" />
                         <h3 className="text-lg font-bold text-cyan-400 uppercase tracking-wider font-mono">
-                            SUBDOMAIN_DISCOVERY
+                            Subdominios encontrados
                         </h3>
                     </div>
                     <div className="flex items-center gap-2 px-3 py-1.5 rounded bg-cyan-500/10 border border-cyan-500/30 text-xs font-mono">

@@ -15,7 +15,7 @@ export default function ScanResults({ results }: ScanResultsProps) {
                     <div className="flex items-center gap-3">
                         <Terminal className="h-5 w-5 text-green-400" />
                         <h3 className="text-lg font-bold text-green-400 uppercase tracking-wider font-mono">
-                            PORT_SCAN_RESULTS
+                            Puertos escaneados
                         </h3>
                     </div>
                     <div className="flex items-center gap-2 px-3 py-1.5 rounded bg-black/60 border border-green-500/30">

@@ -143,7 +143,7 @@ export default function Home() {
             <div className="terminal-panel p-6 text-center">
               <div className="text-xs text-gray-600 font-mono space-y-1">
                 <div className="text-green-400 font-bold mb-2">╔═══════════════════════════════════════╗</div>
-                <div>SCAN COMPLETED SUCCESSFULLY</div>
+                <div>ESCANEO COMPLETADO CON ÉXITO</div>
                 <div>Timestamp: {new Date(scanData.timestamp).toLocaleString()}</div>
                 <div className="text-green-400 font-bold mt-2">╚═══════════════════════════════════════╝</div>
               </div>

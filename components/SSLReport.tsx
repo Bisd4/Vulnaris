@@ -59,7 +59,7 @@ export default function SSLReport({ ssl }: SSLReportProps) {
                     <div className="flex items-center gap-3">
                         <Lock className="h-5 w-5 text-cyan-400" />
                         <h3 className="text-lg font-bold text-cyan-400 uppercase tracking-wider font-mono">
-                            SSL/TLS_CERTIFICATE
+                            Certificado SSL/TLS
                         </h3>
                     </div>
                     <div className={clsx("flex items-center gap-2 px-3 py-1.5 rounded border text-xs font-bold uppercase", statusBg, statusBorder, statusColor)}>

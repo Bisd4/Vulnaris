@@ -90,7 +90,8 @@ export const calculateScore = (
     // 1. Ports Penalty
     ports.forEach((r) => {
         if (r.status === 'open') {
-            if (![80, 443].includes(r.port)) {
+            // Permitimos 80, 443, 8080 y 8443 (puertos comunes de balanceadores y web)
+            if (![80, 443, 8080, 8443].includes(r.port)) {
                 score -= 5; // Reduced penalty per port
             }
         }

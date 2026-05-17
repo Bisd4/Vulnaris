@@ -69,12 +69,8 @@ export const generateUptimeHistory = (host: string): UptimeRecord[] => {
     // Generate checks every hour for more detailed data = 720 data points
     const checkInterval = 60 * 60 * 1000; // 1 hour in milliseconds
 
-    // Create some planned downtime incidents
-    const incidents = [
-        { start: 10, duration: 3 }, // Day 10, 3 hours
-        { start: 18, duration: 1 }, // Day 18, 1 hour
-        { start: 25, duration: 2 }, // Day 25, 2 hours
-    ];
+    // Generamos un historial limpio para sitios sanos (Mock 100% uptime)
+    const incidents: { start: number, duration: number }[] = [];
 
     for (let i = 0; i < 720; i++) {
         const timestamp = new Date(thirtyDaysAgo + (i * checkInterval)).toISOString();
@@ -146,7 +142,8 @@ const DOWNTIME_REASONS = [
  */
 export const analyzeUptime = (records: UptimeRecord[]): UptimeResult => {
     const totalChecks = records.length;
-    const upCount = records.filter(r => r.status === 'up').length;
+    // El estado "degradado" sigue estando disponible, así que se cuenta como UP para el porcentaje.
+    const upCount = records.filter(r => r.status === 'up' || r.status === 'degraded').length;
     const downCount = records.filter(r => r.status === 'down').length;
     const availability = totalChecks > 0 ? (upCount / totalChecks) * 100 : 0;
 

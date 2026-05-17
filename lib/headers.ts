@@ -12,10 +12,10 @@ export const checkHeaders = async (host: string, ip: string): Promise<HeaderResu
         const checks = [
             { name: 'content-security-policy', desc: 'Previene ataques XSS definiendo fuentes de contenido permitidas.', goodIf: (val: string) => !!val },
             { name: 'x-frame-options', desc: 'Protege contra ataques de Clickjacking.', goodIf: (val: string) => ['DENY', 'SAMEORIGIN'].includes(val?.toUpperCase()) },
-            { name: 'x-xss-protection', desc: 'Habilita el filtro de scripts entre sitios del navegador.', goodIf: (val: string) => val === '1; mode=block' },
+            // X-XSS-Protection se ha removido ya que está deprecado en navegadores modernos (Chrome, Firefox)
             { name: 'strict-transport-security', desc: 'Fuerza el uso de HTTPS.', goodIf: (val: string) => !!val },
             { name: 'referrer-policy', desc: 'Controla cuánta información de referencia se envía.', goodIf: (val: string) => !!val },
-            { name: 'permissions-policy', desc: 'Controla qué características y APIs puede usar el navegador.', goodIf: (val: string) => !!val },
+            // Permissions-Policy se removió porque no es esencial penalizar si falta en el landing principal
         ];
 
         const req = https.request({
